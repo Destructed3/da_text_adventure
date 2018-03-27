@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Object - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+  var index_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">BasicObject
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-i-get_armors">#get_armors</a>
+    
+    <li ><a href="#method-i-get_backgrounds">#get_backgrounds</a>
+    
+    <li ><a href="#method-i-get_focus">#get_focus</a>
+    
+    <li ><a href="#method-i-get_shields">#get_shields</a>
+    
+    <li ><a href="#method-i-get_talents">#get_talents</a>
+    
+    <li ><a href="#method-i-get_weapons">#get_weapons</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Object">
+  <h1 id="class-Object" class="class">
+    class Object
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-get_armors" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_armors</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="get_armors-source">
+            <pre><span class="ruby-comment"># File lib/character/lists.rb, line 298</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_armors</span>
+  <span class="ruby-identifier">armors</span> =
+    [
+      {
+        <span class="ruby-value">:type</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;Armor&quot;</span>,
+        <span class="ruby-value">:name</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;Leather Cuirass&quot;</span>,
+        <span class="ruby-value">:value</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">100</span>,
+        <span class="ruby-value">:weight</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">0</span>,
+        <span class="ruby-value">:rating</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">3</span>,
+        <span class="ruby-value">:penalty</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">1</span>,
+      },
+      {
+        <span class="ruby-value">:type</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;Armor&quot;</span>,
+        <span class="ruby-value">:name</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;Chainmail&quot;</span>,
+        <span class="ruby-value">:value</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">250</span>,
+        <span class="ruby-value">:weight</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">1</span>,
+        <span class="ruby-value">:rating</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">4</span>,
+        <span class="ruby-value">:penalty</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">2</span>,
+      },
+      {
+        <span class="ruby-value">:type</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;Armor&quot;</span>,
+        <span class="ruby-value">:name</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;Plate&quot;</span>,
+        <span class="ruby-value">:weight</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">500</span>,
+        <span class="ruby-value">:rating</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">5</span>,
+        <span class="ruby-value">:penalty</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">3</span>,
+      },
+    ]
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">armors</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-get_backgrounds" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_backgrounds</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Character Stuff</p>
+          
+          
+
+          
+          <div class="method-source-code" id="get_backgrounds-source">
+            <pre><span class="ruby-comment"># File lib/character/lists.rb, line 2</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_backgrounds</span>
+  <span class="ruby-identifier">bckgrnds</span> = {
+    <span class="ruby-value">:ander_survivor</span> <span class="ruby-operator">=&gt;</span> {
+      <span class="ruby-value">:is_mage</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">false</span>,
+      <span class="ruby-value">:ability_bonus</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-operator">-&gt;</span> { <span class="ruby-identifier">add_to_ability</span>(<span class="ruby-value">:constitution</span>, <span class="ruby-value">1</span>) },
+      <span class="ruby-value">:focus_bonus</span> <span class="ruby-operator">=&gt;</span> {
+        <span class="ruby-value">:constitution_stamina</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-operator">-&gt;</span> { <span class="ruby-identifier">add_focus</span>(<span class="ruby-value">:constitution</span>, <span class="ruby-string">&quot;Stamina&quot;</span>) },
+        <span class="ruby-value">:strength_climbing</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-operator">-&gt;</span> { <span class="ruby-identifier">add_focus</span>(<span class="ruby-value">:strength</span>, <span class="ruby-string">&quot;Climbing&quot;</span>) },
+      },
+      <span class="ruby-value">:languages_read</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-string">&quot;Ander&quot;</span>, <span class="ruby-string">&quot;Trade Tongue&quot;</span>],
+      <span class="ruby-value">:languages_speak</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-string">&quot;Ander&quot;</span>, <span class="ruby-string">&quot;Trade Tongue&quot;</span>],
+      <span class="ruby-value">:table</span> <span class="ruby-operator">=&gt;</span> {
+        <span class="ruby-string">&quot;2&quot;</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-operator">-&gt;</span> { <span class="ruby-identifier">add_to_ability</span>(<span class="ruby-value">:dexterity</span>, <span class="ruby-value">1</span>) },
+        <span class="ruby-string">&quot;4&quot;</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-operator">-&gt;</span> { <span class="ruby-identifier">add_focus</span>(<span class="ruby-value">:constitution</span>, <span class="ruby-string">&quot;Running&quot;</span>) },
+        <span class="ruby-string">&quot;5&quot;</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-operator">-&gt;</span> { <span class="ruby-identifier">add_focus</span>(<span class="ruby-value">:cunning</span>, <span class="ruby-string">&quot;Historical Lore&quot;</span>) },
+        <span class="ruby-string">&quot;6&quot;</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-operator">-&gt;</span> { <span class="ruby-identifier">add_focus</span>(<span class="ruby-value">:perception</span>, <span class="ruby-string">&quot;Tracking&quot;</span>) },
+        <span class="ruby-string">&quot;8&quot;</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-operator">-&gt;</span> { <span class="ruby-identifier">add_to_ability</span>(<span class="ruby-value">:strength</span>, <span class="ruby-value">1</span>) },
+        <span class="ruby-string">&quot;9&quot;</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-operator">-&gt;</span> { <span class="ruby-identifier">add_focus</span>(<span class="ruby-value">:dexterity</span>, <span class="ruby-string">&quot;Brawling&quot;</span>) },
+        <span class="ruby-string">&quot;11&quot;</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-operator">-&gt;</span> { <span class="ruby-identifier">add_focus</span>(<span class="ruby-value">:willpower</span>, <span class="ruby-string">&quot;Courage&quot;</span>) },
+        <span class="ruby-string">&quot;12&quot;</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-operator">-&gt;</span> { <span class="ruby-identifier">add_to_ability</span>(<span class="ruby-value">:perception</span>, <span class="ruby-value">1</span>) },
+      },
+    },
+    <span class="ruby-value">:antivian_wayfarer</span> <span class="ruby-operator">=&gt;</span> {
+      <span class="ruby-value">:is_mage</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">false</span>,
+      <span class="ruby-value">:ability_bonus</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-operator">-&gt;</span> { <span class="ruby-identifier">add_to_ability</span>(<span class="ruby-value">:communication</span>, <span class="ruby-value">1</span>) },
+      <span class="ruby-value">:focus_bonus</span> <span class="ruby-operator">=&gt;</span> {
+        <span class="ruby-value">:communication_bargaining</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-operator">-&gt;</span> { <span class="ruby-identifier">add_to_ability</span>(<span class="ruby-value">:communication</span>, <span class="ruby-string">&quot;Bargaining&quot;</span>) },
+        <span class="ruby-value">:cunning_navigation</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-operator">-&gt;</span> { <span class="ruby-identifier">add_focus</span>(<span class="ruby-value">:cunning</span>, <span class="ruby-string">&quot;Navigation&quot;</span>) },
+      },
+      <span class="ruby-value">:languages_read</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-string">&quot;Antivian&quot;</span>, <span class="ruby-string">&quot;Trade Tongue&quot;</span>],
+      <span class="ruby-value">:languages_speak</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-string">&quot;Antivian&quot;</span>, <span class="ruby-string">&quot;Trade Tongue&quot;</span>],
+      <span class="ruby-value">:table</span> <span class="ruby-operator">=&gt;</span> {
+        <span class="ruby-string">&quot;2&quot;</span>  <span class="ruby-operator">=&gt;</span> <span class="ruby-operator">-&gt;</span> { <span class="ruby-identifier">add_to_ability</span>(<span class="ruby-value">:cunning</span>, <span class="ruby-value">1</span>) },
+        <span class="ruby-string">&quot;4&quot;</span>  <span class="ruby-operator">=&gt;</span> <span class="ruby-operator">-&gt;</span> { <span class="ruby-identifier">add_focus</span>(<span class="ruby-value">:cunning</span>, <span class="ruby-string">&quot;Evaluation&quot;</span>) },
+        <span class="ruby-string">&quot;5&quot;</span>  <span class="ruby-operator">=&gt;</span> <span class="ruby-operator">-&gt;</span> { <span class="ruby-identifier">add_focus</span>(<span class="ruby-value">:communication</span>, <span class="ruby-string">&quot;Seduction&quot;</span>) },
+        <span class="ruby-string">&quot;6&quot;</span>  <span class="ruby-operator">=&gt;</span> <span class="ruby-operator">-&gt;</span> { <span class="ruby-identifier">add_focus</span>(<span class="ruby-value">:communication</span>, <span class="ruby-string">&quot;Persuation&quot;</span>) },
+        <span class="ruby-string">&quot;8&quot;</span>  <span class="ruby-operator">=&gt;</span> <span class="ruby-operator">-&gt;</span> { <span class="ruby-identifier">add_to_ability</span>(<span class="ruby-value">:dexterity</span>, <span class="ruby-value">1</span>) },
+        <span class="ruby-string">&quot;9&quot;</span>  <span class="ruby-operator">=&gt;</span> <span class="ruby-operator">-&gt;</span> { <span class="ruby-identifier">add_focus</span>(<span class="ruby-value">:dexterity</span>, <span class="ruby-string">&quot;Initiative&quot;</span>) },
+        <span class="ruby-string">&quot;11&quot;</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-operator">-&gt;</span> { <span class="ruby-identifier">add_focus</span>(<span class="ruby-value">:perception</span>, <span class="ruby-string">&quot;Hearing&quot;</span>) },
+        <span class="ruby-string">&quot;12&quot;</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-operator">-&gt;</span> { <span class="ruby-identifier">add_to_ability</span>(<span class="ruby-value">:perception</span>, <span class="ruby-value">1</span>) },
+      },
+    },
+    <span class="ruby-value">elf_apostate:</span> {
+       <span class="ruby-value">is_mage:</span> <span class="ruby-keyword">true</span>,
+       <span class="ruby-value">ability_bonus:</span> <span class="ruby-operator">-&gt;</span> { <span class="ruby-identifier">add_to_ability</span>(<span class="ruby-value">:willpower</span>, <span class="ruby-value">1</span>) },
+       <span class="ruby-value">focus_bonus:</span> {
+         <span class="ruby-value">cunning_natural_lore:</span> <span class="ruby-operator">-&gt;</span> { <span class="ruby-identifier">add_focus</span>(<span class="ruby-value">:cunning</span>, <span class="ruby-string">&quot;Natural Lore&quot;</span>) },
+         <span class="ruby-value">willpower_self_dicipline:</span> <span class="ruby-operator">-&gt;</span> { <span class="ruby-identifier">add_focus</span>(<span class="ruby-value">:willpower</span>, <span class="ruby-string">&quot;Self-Discipline&quot;</span>)}
+       },
+       <span class="ruby-value">languages_read:</span> [<span class="ruby-string">&quot;Trade Tongue&quot;</span>],
+       <span class="ruby-value">languages_speak:</span> [<span class="ruby-string">&quot;Trade Tongue&quot;</span>],
+       <span class="ruby-value">table:</span> {
+         <span class="ruby-string">&quot;2&quot;</span>  <span class="ruby-operator">=&gt;</span> <span class="ruby-operator">-&gt;</span> { <span class="ruby-identifier">add_to_ability</span>(<span class="ruby-value">:cunning</span>, <span class="ruby-value">1</span>) },
+         <span class="ruby-string">&quot;4&quot;</span>  <span class="ruby-operator">=&gt;</span> <span class="ruby-operator">-&gt;</span> { <span class="ruby-identifier">add_language</span>(<span class="ruby-string">&quot;Elven&quot;</span>) },
+         <span class="ruby-string">&quot;5&quot;</span>  <span class="ruby-operator">=&gt;</span> <span class="ruby-operator">-&gt;</span> { <span class="ruby-identifier">add_focus</span>(<span class="ruby-value">:cunning</span>, <span class="ruby-string">&quot;Cultural Lore&quot;</span>) },
+         <span class="ruby-string">&quot;6&quot;</span>  <span class="ruby-operator">=&gt;</span> <span class="ruby-operator">-&gt;</span> { <span class="ruby-identifier">add_focus</span>(<span class="ruby-value">:willpower</span>, <span class="ruby-string">&quot;Self-Discipline&quot;</span>) },
+         <span class="ruby-string">&quot;8&quot;</span>  <span class="ruby-operator">=&gt;</span> <span class="ruby-operator">-&gt;</span> { <span class="ruby-identifier">add_to_ability</span>(<span class="ruby-value">:magic</span>, <span class="ruby-value">1</span>) },
+         <span class="ruby-string">&quot;9&quot;</span>  <span class="ruby-operator">=&gt;</span> <span class="ruby-operator">-&gt;</span> { <span class="ruby-identifier">add_focus</span>(<span class="ruby-value">:dexterity</span>, <span class="ruby-string">&quot;Stealth&quot;</span>) },
+         <span class="ruby-string">&quot;11&quot;</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-operator">-&gt;</span> { <span class="ruby-identifier">add_to_ability</span>(<span class="ruby-value">:dexterity</span>, <span class="ruby-value">1</span>) },
+         <span class="ruby-string">&quot;12&quot;</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-operator">-&gt;</span> { <span class="ruby-identifier">add_weapongroup</span>(<span class="ruby-string">&quot;Bows&quot;</span>)}
+       }
+    },
+  }
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">bckgrnds</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-get_focus" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_focus</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="get_focus-source">
+            <pre><span class="ruby-comment"># File lib/character/lists.rb, line 163</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_focus</span>
+  <span class="ruby-comment"># arrays with possible ability focus</span>
+  <span class="ruby-identifier">focus</span> =
+    {
+      <span class="ruby-value">:communication</span> <span class="ruby-operator">=&gt;</span> [
+        <span class="ruby-string">&quot;Animal Handling&quot;</span>, <span class="ruby-string">&quot;Bargaining&quot;</span>, <span class="ruby-string">&quot;Deception&quot;</span>, <span class="ruby-string">&quot;Disguise&quot;</span>, <span class="ruby-string">&quot;Etiquette&quot;</span>, <span class="ruby-string">&quot;Gambling&quot;</span>, <span class="ruby-string">&quot;Investigation&quot;</span>, <span class="ruby-string">&quot;Leadership&quot;</span>, <span class="ruby-string">&quot;Performance&quot;</span>, <span class="ruby-string">&quot;Persuation&quot;</span>, <span class="ruby-string">&quot;Seduction&quot;</span>,
+      ],
+      <span class="ruby-value">:constitution</span> <span class="ruby-operator">=&gt;</span> [
+        <span class="ruby-string">&quot;Drinking&quot;</span>, <span class="ruby-string">&quot;Rowing&quot;</span>, <span class="ruby-string">&quot;Running&quot;</span>, <span class="ruby-string">&quot;Stamina&quot;</span>, <span class="ruby-string">&quot;Swimming&quot;</span>,
+      ],
+      <span class="ruby-value">:cunning</span> <span class="ruby-operator">=&gt;</span> [
+        <span class="ruby-string">&quot;Arcane Lore&quot;</span>, <span class="ruby-string">&quot;Brewing&quot;</span>, <span class="ruby-string">&quot;Cartography&quot;</span>, <span class="ruby-string">&quot;Cultural Lore&quot;</span>, <span class="ruby-string">&quot;Enchantment&quot;</span>, <span class="ruby-string">&quot;Engineering&quot;</span>, <span class="ruby-string">&quot;Evaluation&quot;</span>, <span class="ruby-string">&quot;Healing&quot;</span>, <span class="ruby-string">&quot;Heraldry&quot;</span>, <span class="ruby-string">&quot;Historical Lore&quot;</span>, <span class="ruby-string">&quot;Military Lore&quot;</span>, <span class="ruby-string">&quot;Musical Lore&quot;</span>, <span class="ruby-string">&quot;Natural Lore&quot;</span>, <span class="ruby-string">&quot;Navigation&quot;</span>, <span class="ruby-string">&quot;Poison Lore&quot;</span>, <span class="ruby-string">&quot;Qun&quot;</span>, <span class="ruby-string">&quot;Research&quot;</span>, <span class="ruby-string">&quot;Religious Lore&quot;</span>, <span class="ruby-string">&quot;Writing&quot;</span>,
+      ],
+      <span class="ruby-value">:dexterity</span> <span class="ruby-operator">=&gt;</span> [
+        <span class="ruby-string">&quot;Acrobatics&quot;</span>, <span class="ruby-string">&quot;Bows&quot;</span>, <span class="ruby-string">&quot;Brawling&quot;</span>, <span class="ruby-string">&quot;Calligraphy&quot;</span>, <span class="ruby-string">&quot;Crafting&quot;</span>, <span class="ruby-string">&quot;Dueling&quot;</span>, <span class="ruby-string">&quot;Grenades&quot;</span>, <span class="ruby-string">&quot;Initiative&quot;</span>, <span class="ruby-string">&quot;Legerdemain&quot;</span>, <span class="ruby-string">&quot;Light Blades&quot;</span>, <span class="ruby-string">&quot;Lock Picking&quot;</span>, <span class="ruby-string">&quot;Riding&quot;</span>, <span class="ruby-string">&quot;Staves&quot;</span>, <span class="ruby-string">&quot;Stealth&quot;</span>, <span class="ruby-string">&quot;Traps&quot;</span>,
+      ],
+      <span class="ruby-value">:magic</span> <span class="ruby-operator">=&gt;</span> [
+        <span class="ruby-string">&quot;Arcane Lance&quot;</span>, <span class="ruby-string">&quot;Blood&quot;</span>, <span class="ruby-string">&quot;Creation&quot;</span>, <span class="ruby-string">&quot;Entropy&quot;</span>, <span class="ruby-string">&quot;Pri,mal&quot;</span>, <span class="ruby-string">&quot;Spirit&quot;</span>,
+      ],
+      <span class="ruby-value">:perception</span> <span class="ruby-operator">=&gt;</span> [
+        <span class="ruby-string">&quot;Empathy&quot;</span>, <span class="ruby-string">&quot;Detect Darkspawn&quot;</span>, <span class="ruby-string">&quot;Hearing&quot;</span>, <span class="ruby-string">&quot;Searching&quot;</span>, <span class="ruby-string">&quot;Seeling&quot;</span>, <span class="ruby-string">&quot;Smelling&quot;</span>, <span class="ruby-string">&quot;Tracking&quot;</span>,
+      ],
+      <span class="ruby-value">:strength</span> <span class="ruby-operator">=&gt;</span> [
+        <span class="ruby-string">&quot;Axes&quot;</span>, <span class="ruby-string">&quot;Bludgeons&quot;</span>, <span class="ruby-string">&quot;Climbing&quot;</span>, <span class="ruby-string">&quot;Driving&quot;</span>, <span class="ruby-string">&quot;Heavy Blades&quot;</span>, <span class="ruby-string">&quot;Intimidation&quot;</span>, <span class="ruby-string">&quot;Jumping&quot;</span>, <span class="ruby-string">&quot;Lances&quot;</span>, <span class="ruby-string">&quot;Might&quot;</span>, <span class="ruby-string">&quot;Polearms&quot;</span>, <span class="ruby-string">&quot;Smithing&quot;</span>, <span class="ruby-string">&quot;Spears&quot;</span>,
+      ],
+      <span class="ruby-value">:willpower</span> <span class="ruby-operator">=&gt;</span> [
+        <span class="ruby-string">&quot;Courage&quot;</span>, <span class="ruby-string">&quot;Faith&quot;</span>, <span class="ruby-string">&quot;Morale&quot;</span>, <span class="ruby-string">&quot;Self-Disipline&quot;</span>,
+      ],
+    }
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">focus</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-get_shields" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_shields</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="get_shields-source">
+            <pre><span class="ruby-comment"># File lib/character/lists.rb, line 269</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_shields</span>
+  <span class="ruby-identifier">shields</span> =
+    [
+      {
+        <span class="ruby-value">:type</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;Shield&quot;</span>,
+        <span class="ruby-value">:name</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;Small Shield&quot;</span>,
+        <span class="ruby-value">:value</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">100</span>,
+        <span class="ruby-value">:size</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">0</span>,
+        <span class="ruby-value">:bonus</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">1</span>,
+      },
+      {
+        <span class="ruby-value">:type</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;Shield&quot;</span>,
+        <span class="ruby-value">:name</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;Medium Shield&quot;</span>,
+        <span class="ruby-value">:value</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">250</span>,
+        <span class="ruby-value">:size</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">1</span>,
+        <span class="ruby-value">:bonus</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">2</span>,
+      },
+      {
+        <span class="ruby-value">:type</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;Shield&quot;</span>,
+        <span class="ruby-value">:name</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;Heavy Shield&quot;</span>,
+        <span class="ruby-value">:value</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">500</span>,
+        <span class="ruby-value">:size</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">2</span>,
+        <span class="ruby-value">:bonus</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">3</span>,
+      },
+    ]
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">shields</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-get_talents" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_talents</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="get_talents-source">
+            <pre><span class="ruby-comment"># File lib/character/lists.rb, line 69</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_talents</span>
+  <span class="ruby-identifier">talents</span> = [
+    {
+      <span class="ruby-value">:name</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;Archery Style&quot;</span>,
+      <span class="ruby-value">:requirements</span> <span class="ruby-operator">=&gt;</span> {
+        <span class="ruby-string">&quot;weapon_groups&quot;</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-string">&quot;Bows&quot;</span>],
+        <span class="ruby-string">&quot;class&quot;</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-string">&quot;Warrior&quot;</span>, <span class="ruby-string">&quot;Rogue&quot;</span>],
+      },
+    },
+    {
+      <span class="ruby-value">:name</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;Armour Training&quot;</span>,
+      <span class="ruby-value">:requirements</span> <span class="ruby-operator">=&gt;</span> {
+        <span class="ruby-string">&quot;class&quot;</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-string">&quot;Warrior&quot;</span>],
+      },
+    },
+    {
+      <span class="ruby-value">:name</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;Chirurgy&quot;</span>,
+      <span class="ruby-value">:requirements</span> <span class="ruby-operator">=&gt;</span> {
+        <span class="ruby-string">&quot;focus&quot;</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-value">:cunning</span>, <span class="ruby-string">&quot;Healing&quot;</span>],
+      },
+    },
+    {
+      <span class="ruby-value">:name</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;Contacts&quot;</span>,
+      <span class="ruby-value">:requirements</span> <span class="ruby-operator">=&gt;</span> {
+        <span class="ruby-string">&quot;abilities&quot;</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-value">:communication</span>, <span class="ruby-value">1</span>],
+      },
+    },
+    {
+      <span class="ruby-value">:name</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;Dual Weapon Style&quot;</span>,
+      <span class="ruby-value">:requirements</span> <span class="ruby-operator">=&gt;</span> {
+        <span class="ruby-string">&quot;abilities&quot;</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-value">:cunning</span>, <span class="ruby-value">2</span>],
+        <span class="ruby-string">&quot;class&quot;</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-string">&quot;Warrior&quot;</span>, <span class="ruby-string">&quot;Rogue&quot;</span>],
+      },
+    },
+    {
+      <span class="ruby-value">:name</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;Linguistics&quot;</span>,
+      <span class="ruby-value">:requirements</span> <span class="ruby-operator">=&gt;</span> {
+        <span class="ruby-string">&quot;abilities&quot;</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-value">:cunning</span>, <span class="ruby-value">1</span>],
+      },
+    },
+    {
+      <span class="ruby-value">:name</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;Lore&quot;</span>,
+      <span class="ruby-value">:requirements</span> <span class="ruby-operator">=&gt;</span> {
+        <span class="ruby-string">&quot;abilities&quot;</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-value">:cunning</span>, <span class="ruby-value">2</span>],
+      },
+    },
+    {
+      <span class="ruby-value">:name</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;Scouting&quot;</span>,
+      <span class="ruby-value">:requirements</span> <span class="ruby-operator">=&gt;</span> {
+        <span class="ruby-string">&quot;abilities&quot;</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-value">:dexterity</span>, <span class="ruby-value">2</span>],
+        <span class="ruby-string">&quot;class&quot;</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-string">&quot;Rogue&quot;</span>],
+      },
+    },
+    {
+      <span class="ruby-value">:name</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;Single Weapon Style&quot;</span>,
+      <span class="ruby-value">:requirements</span> <span class="ruby-operator">=&gt;</span> {
+        <span class="ruby-string">&quot;abilities&quot;</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-value">:perception</span>, <span class="ruby-value">2</span>],
+        <span class="ruby-string">&quot;class&quot;</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-string">&quot;Warrior&quot;</span>, <span class="ruby-string">&quot;Rogue&quot;</span>],
+      },
+    },
+    {
+      <span class="ruby-value">:name</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;Thievery&quot;</span>,
+      <span class="ruby-value">:requirements</span> <span class="ruby-operator">=&gt;</span> {
+        <span class="ruby-string">&quot;abilities&quot;</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-value">:dexterity</span>, <span class="ruby-value">3</span>],
+        <span class="ruby-string">&quot;class&quot;</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-string">&quot;Rogue&quot;</span>],
+      },
+    },
+    {
+      <span class="ruby-value">:name</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;Throwing Weapon&quot;</span>,
+      <span class="ruby-value">:requirements</span> <span class="ruby-operator">=&gt;</span> {
+        <span class="ruby-string">&quot;weapon_groups&quot;</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-string">&quot;Axes&quot;</span>, <span class="ruby-string">&quot;Spears&quot;</span>, <span class="ruby-string">&quot;Light Blades&quot;</span>],
+        <span class="ruby-string">&quot;class&quot;</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-string">&quot;Warrior&quot;</span>, <span class="ruby-string">&quot;Rogue&quot;</span>],
+      },
+    },
+    {
+      <span class="ruby-value">:name</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;Two-Hander Style&quot;</span>,
+      <span class="ruby-value">:requirements</span> <span class="ruby-operator">=&gt;</span> {
+        <span class="ruby-string">&quot;abilities&quot;</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-value">:strength</span>, <span class="ruby-value">3</span>],
+        <span class="ruby-string">&quot;weapon_groups&quot;</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-string">&quot;Axes&quot;</span>, <span class="ruby-string">&quot;Heavy Blades&quot;</span>, <span class="ruby-string">&quot;Bludgeons&quot;</span>, <span class="ruby-string">&quot;Spears&quot;</span>],
+        <span class="ruby-string">&quot;class&quot;</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-string">&quot;Warrior&quot;</span>],
+      },
+    },
+    {
+      <span class="ruby-value">:name</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;Weapon &amp; Shield Style&quot;</span>,
+      <span class="ruby-value">:requirements</span> <span class="ruby-operator">=&gt;</span> {
+        <span class="ruby-string">&quot;abilities&quot;</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-value">:strength</span>, <span class="ruby-value">2</span>],
+        <span class="ruby-string">&quot;class&quot;</span> <span class="ruby-operator">=&gt;</span> [<span class="ruby-string">&quot;Warrior&quot;</span>],
+      },
+    },
+  ]
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">talents</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-get_weapons" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_weapons</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Equipment</p>
+          
+          
+
+          
+          <div class="method-source-code" id="get_weapons-source">
+            <pre><span class="ruby-comment"># File lib/character/lists.rb, line 197</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_weapons</span>()
+  <span class="ruby-identifier">weapons</span> =
+    [
+      {
+        <span class="ruby-value">:type</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;Weapon&quot;</span>,
+        <span class="ruby-value">:name</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;Fists&quot;</span>,
+        <span class="ruby-value">:value</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">0</span>,
+        <span class="ruby-value">:weapon_group</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;Brawling&quot;</span>,
+        <span class="ruby-value">:min_str</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">0</span>,
+        <span class="ruby-value">:dmg</span> <span class="ruby-operator">=&gt;</span> {
+          <span class="ruby-value">:dices</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">1</span>,
+          <span class="ruby-value">:bonus</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">0</span>,
+        },
+        <span class="ruby-value">:reach</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">0</span>,
+        <span class="ruby-value">:is_ranged</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">false</span>,
+        <span class="ruby-value">:is_melee</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">true</span>,
+        <span class="ruby-value">:is_two_handed</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">true</span>,
+        <span class="ruby-value">:can_offhand</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">false</span>,
+      },
+      {
+        <span class="ruby-value">:type</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;Weapon&quot;</span>,
+        <span class="ruby-value">:name</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;Battleaxe&quot;</span>,
+        <span class="ruby-value">:value</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">100</span>,
+        <span class="ruby-value">:weapon_group</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;Axes&quot;</span>,
+        <span class="ruby-value">:min_str</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">0</span>,
+        <span class="ruby-value">:dmg</span> <span class="ruby-operator">=&gt;</span> {
+          <span class="ruby-value">:dices</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">2</span>,
+          <span class="ruby-value">:bonus</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">2</span>,
+        },
+        <span class="ruby-value">:reach</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">0</span>,
+        <span class="ruby-value">:is_ranged</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">false</span>,
+        <span class="ruby-value">:is_melee</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">true</span>,
+        <span class="ruby-value">:is_two_handed</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">false</span>,
+        <span class="ruby-value">:can_offhand</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">false</span>,
+      },
+      {
+        <span class="ruby-value">:type</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;Weapon&quot;</span>,
+        <span class="ruby-value">:name</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;Spear&quot;</span>,
+        <span class="ruby-value">:value</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">100</span>,
+        <span class="ruby-value">:weapon_group</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;Spears&quot;</span>,
+        <span class="ruby-value">:min_str</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">0</span>,
+        <span class="ruby-value">:dmg</span> <span class="ruby-operator">=&gt;</span> {
+          <span class="ruby-value">:dices</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">3</span>,
+          <span class="ruby-value">:bonus</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">0</span>,
+        },
+        <span class="ruby-value">:reach</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">1</span>,
+        <span class="ruby-value">:is_ranged</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">false</span>,
+        <span class="ruby-value">:is_melee</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">true</span>,
+        <span class="ruby-value">:is_two_handed</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">true</span>,
+        <span class="ruby-value">:can_offhand</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">false</span>,
+      },
+      {
+        <span class="ruby-value">:type</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;Weapon&quot;</span>,
+        <span class="ruby-value">:name</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;Longsword&quot;</span>,
+        <span class="ruby-value">:value</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">100</span>,
+        <span class="ruby-value">:weapon_group</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&quot;Long Blades&quot;</span>,
+        <span class="ruby-value">:min_str</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">0</span>,
+        <span class="ruby-value">:dmg</span> <span class="ruby-operator">=&gt;</span> {
+          <span class="ruby-value">:dices</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">2</span>,
+          <span class="ruby-value">:bonus</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">0</span>,
+        },
+        <span class="ruby-value">:reach</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">0</span>,
+        <span class="ruby-value">:is_ranged</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">false</span>,
+        <span class="ruby-value">:is_melee</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">true</span>,
+        <span class="ruby-value">:is_two_handed</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">true</span>,
+        <span class="ruby-value">:can_offhand</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-keyword">true</span>,
+      },
+    ]
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">weapons</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.0.3.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

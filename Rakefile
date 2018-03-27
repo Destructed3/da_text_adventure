@@ -11,6 +11,12 @@ require 'rubygems/package_task'
 require 'rdoc/task'
 require 'rake/testtask'
 
+begin
+  require 'rspec/core/rake_task'
+  RSpec::Core::RakeTask.new(:spec)
+rescue LoadError
+end
+
 spec = Gem::Specification.new do |s|
   s.name = 'dragon_age_text_adventure'
   s.version = '0.0.1'

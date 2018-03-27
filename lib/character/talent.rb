@@ -12,15 +12,18 @@ class Talent
     if (hero.talents.key? @name)
       return false if hero.talents[@name] == "Master"
     end
+    
     # test if hero's class is allowed to learn this talent
     if @requirements.key? "class"
-      return false if !@requirements["class"].include? hero.cclass.name
+      return false if !@requirements["class"].include?(hero.cclass)
     end
+    
     # test if hero abilities fit
-    if @requirements.key? "abilities"
+    if @requirements.key?("abilities")
       x = @requirements["abilities"]
       return false if hero.abilities[x[0]][0] < x[1]
     end
+    
     # check if hero has a necessary talent
     if @requirements.key? "focus"
       abort = false
@@ -32,8 +35,12 @@ class Talent
       end
       return false if abort
     end
-    if @requirements.key? "weapon_groups"
-      @requirements["weapon_groups"].each { |req| return true if hero.weapon_groups.include? req }
+    
+    # check if hero has necessary weapon groups
+    if @requirements.key?("weapon_groups")
+      @requirements["weapon_groups"].each do |requirement| 
+        return true if hero.weapon_groups.include?( requirement )
+      end
       return false
     end
     return true

@@ -1,0 +1,37 @@
+Tue, 27 Mar 2018 20:30:10 +0200
+./lib/character/hero.rb	Tue, 27 Mar 2018 07:33:05 +0200
+./lib/character/lists.rb	Sun, 25 Mar 2018 13:32:02 +0200
+./lib/character/talent.rb	Tue, 27 Mar 2018 20:11:07 +0200
+./lib/main.rb	Sat, 24 Mar 2018 14:32:54 +0100
+./lib/modules/char_creation.rb	Tue, 27 Mar 2018 08:20:22 +0200
+./lib/ressources/dice_engine.rb	Sat, 24 Mar 2018 13:06:34 +0100
+./lib/ressources/helper_dialogue.rb	Tue, 27 Mar 2018 08:25:52 +0200
+./LICENSE	Sat, 24 Mar 2018 12:46:20 +0100
+./nbproject/private/private.properties	Sun, 25 Mar 2018 13:35:13 +0200
+./nbproject/private/private.xml	Tue, 27 Mar 2018 08:40:27 +0200
+./nbproject/private/rake-d.txt	Tue, 27 Mar 2018 20:05:06 +0200
+./nbproject/project.properties	Sat, 24 Mar 2018 12:46:20 +0100
+./nbproject/project.xml	Sun, 25 Mar 2018 13:35:13 +0200
+./pkg/DA TA-0.0.1/lib/character/hero.rb	Tue, 27 Mar 2018 07:33:05 +0200
+./pkg/DA TA-0.0.1/lib/character/lists.rb	Sun, 25 Mar 2018 13:32:02 +0200
+./pkg/DA TA-0.0.1/lib/character/talent.rb	Tue, 27 Mar 2018 20:11:07 +0200
+./pkg/DA TA-0.0.1/lib/main.rb	Sat, 24 Mar 2018 14:32:54 +0100
+./pkg/DA TA-0.0.1/lib/modules/char_creation.rb	Tue, 27 Mar 2018 08:20:22 +0200
+./pkg/DA TA-0.0.1/lib/ressources/dice_engine.rb	Sat, 24 Mar 2018 13:06:34 +0100
+./pkg/DA TA-0.0.1/lib/ressources/helper_dialogue.rb	Tue, 27 Mar 2018 08:25:52 +0200
+./pkg/DA TA-0.0.1/LICENSE	Sat, 24 Mar 2018 12:46:20 +0100
+./pkg/DA TA-0.0.1/Rakefile	Sun, 25 Mar 2018 13:38:09 +0200
+./pkg/DA TA-0.0.1/README	Sat, 24 Mar 2018 12:46:20 +0100
+./pkg/dragon_age_text_adventure-0.0.1/lib/character/hero.rb	Tue, 27 Mar 2018 07:33:05 +0200
+./pkg/dragon_age_text_adventure-0.0.1/lib/character/lists.rb	Sun, 25 Mar 2018 13:32:02 +0200
+./pkg/dragon_age_text_adventure-0.0.1/lib/character/talent.rb	Tue, 27 Mar 2018 20:11:07 +0200
+./pkg/dragon_age_text_adventure-0.0.1/lib/main.rb	Sat, 24 Mar 2018 14:32:54 +0100
+./pkg/dragon_age_text_adventure-0.0.1/lib/modules/char_creation.rb	Tue, 27 Mar 2018 08:20:22 +0200
+./pkg/dragon_age_text_adventure-0.0.1/lib/ressources/dice_engine.rb	Sat, 24 Mar 2018 13:06:34 +0100
+./pkg/dragon_age_text_adventure-0.0.1/lib/ressources/helper_dialogue.rb	Tue, 27 Mar 2018 08:25:52 +0200
+./pkg/dragon_age_text_adventure-0.0.1/LICENSE	Sat, 24 Mar 2018 12:46:20 +0100
+./pkg/dragon_age_text_adventure-0.0.1/Rakefile	Sun, 25 Mar 2018 13:38:09 +0200
+./pkg/dragon_age_text_adventure-0.0.1/README	Sat, 24 Mar 2018 12:46:20 +0100
+./pkg/dragon_age_text_adventure-0.0.1.gem	Sun, 25 Mar 2018 13:38:11 +0200
+./Rakefile	Sun, 25 Mar 2018 13:38:09 +0200
+./README	Sat, 24 Mar 2018 12:46:20 +0100
