@@ -9,16 +9,6 @@ class CC # -> character-manipulation newCharCreation?
 
   def initialize
     @hero = Hero.new
-    @abs = {
-      :communication => [0, []],
-      :constitution => [0, []],
-      :cunning => [0, []],
-      :dexterity => [0, []],
-      :magic => [0, []],
-      :perception => [0, []],
-      :strength => [0, []],
-      :willpower => [0, []],
-    }
   end
 
   def new_character
@@ -32,38 +22,38 @@ class CC # -> character-manipulation newCharCreation?
   :private
 
   def get_abilitys()
-    @abs.keys.each do |key|
-      @abs[key][0] = determine_ability_value(key)
+    @hero.abilities.keys.each do |key|
+      @hero.abilities[key][0] = determine_ability_value(key)
     end
 
     puts ""
     puts "Your rolled these Abilities:"
     puts "Com|Con|Cun|Dex|Mag|Per|Str|Wil"
-    @abs.each do |key, value|
+    @hero.abilities.each do |key, value|
       ending = (key != :willpower) ? " |" : ""
       print " " + value[0].to_s + ending
     end
     2.times { puts "" }
 
-    @hero.abilities = @abs
   end
 
   def choose_background()
-    puts "Background Benefits:"
-    chosen_bkgr = ""
-
-    loop do
-      chosen_bkgr = inputloop_hash( "Available Backgrounds", get_backgrounds() )
-      break if !chosen_bkgr[:is_mage]
-      
-      puts "Choosing this background will determine your character class to being a mage."
-      if get_yes("Do you want to continue?")
-        @hero.cclass = :mage
-        break
+    loop_out = Proc.new { |hash, key|
+      if hash[key][:is_mage]
+        get_yes("Chosing this background will render you a Mage.\nDo you wish to continue?")
+      else
+        get_yes("Do you wish to continue?")
       end
-    end
+    }    
+    
+    puts "Background Benefits:"
+
+    chosen_bkgr = inputloop_hash( "Available Backgrounds", get_backgrounds(), loop_out )
+    
+    @hero.cclass = "Mage" if chosen_bkgr[:is_mage]
     
     chosen_bkgr[:ability_bonus].()
+    
     chosen_bkgr[:languages_read].each do |language|
       @hero.languages_read << language
     end
@@ -81,28 +71,25 @@ class CC # -> character-manipulation newCharCreation?
 
     #Conclusion for player
     puts "Final Values:"
-    @abs.each do |key, value|
+    @hero.abilities.each do |key, value|
       puts key.to_s.capitalize + " " + value[0].to_s
-      @abs[key][1].each do |focus|
+      @hero.abilities[key][1].each do |focus|
         puts " -" + focus
       end
     end
     puts ""
   end
 
-  def choose_class()
-    # Choose char class    
+  def choose_class()    
     @hero.cclass = inputloop_array("Choose your Character Class!", ["Warrior", "Rogue"]) if @hero.cclass == nil
     @hero.lvlup
   end
 
   def conclusion()
+    add_equipment(@hero)
     @hero.name = inputloop_text "Choose a Name!"
-    puts ""
     @hero.print_charsheet
-    add_weapons @hero
     @hero.open_inventory
-    puts ""
     puts "Onto the Adventure!"
   end
 
@@ -146,8 +133,7 @@ class CC # -> character-manipulation newCharCreation?
     end
   end
 
-  def add_weapons(hero)
-    print hero.weapon_groups
+  def add_equipment(hero)
     weapons = get_weapons()
     hero.inventory[:backpack] << weapons.find { |we| we[:name] == "Fists" }
     if hero.weapon_groups.include? "Spears"

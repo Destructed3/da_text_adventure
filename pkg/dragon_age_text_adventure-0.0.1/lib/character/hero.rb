@@ -33,6 +33,16 @@ class Hero
     @languages_speak = []
     @languages_read = []
     @weapon_groups = []
+    @abilities = {
+      :communication => [0, []],
+      :constitution => [0, []],
+      :cunning => [0, []],
+      :dexterity => [0, []],
+      :magic => [0, []],
+      :perception => [0, []],
+      :strength => [0, []],
+      :willpower => [0, []]
+    }
     @talents = {}
     @weapon_groups = []
     @inventory = { backpack: [] }

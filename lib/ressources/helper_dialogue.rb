@@ -70,7 +70,9 @@ module HelpFunctions_dialoge
   end
   
   # default input loops
-  def inputloop_array ( header, array )    
+  def inputloop_array ( header, array, loop_out = nil )    
+    loop_out = default_loop_out() if loop_out == nil
+    
     loop do      
       output = nil
       puts header
@@ -83,7 +85,7 @@ module HelpFunctions_dialoge
       
       if output
         puts "You choose "+output.to_s
-        return output if get_yes("Continue?")
+        return output if loop_out.()
       else
         puts "Please choose a legal option!"
       end
@@ -92,7 +94,8 @@ module HelpFunctions_dialoge
     
   end
   
-  def inputloop_hash(header = "", hash)
+  def inputloop_hash(header = "", hash  = {}, loop_out = nil)
+    loop_out = default_loop_out() if loop_out == nil
     loop do
       puts header
   
@@ -109,9 +112,8 @@ module HelpFunctions_dialoge
       if(input && input - 1 <= hash.length)
         key = array[input - 1]
         puts "You have chosen " + get_hash_title(key)
-        if(  get_yes("Do you want to accept this choice and move on?") )
-          return hash[key]
-        end
+        
+        return hash[key] if(  loop_out.(hash, key) )
       end
     end
     
@@ -155,9 +157,15 @@ module HelpFunctions_dialoge
   end
   
   def number_or_false(string)
-    Integer(string || '')
+    return Integer(string || '')
   rescue ArgumentError
-    false
+    return false
+  end
+  
+  def default_loop_out
+    return Proc.new { 
+      get_yes( "Do you want to accept this choice?" ) 
+    }
   end
   
 end
