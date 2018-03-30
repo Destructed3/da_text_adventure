@@ -1,37 +1,71 @@
 require 'ressources/helper_dialogue'
 
 RSpec.describe HelpFunctions_dialoge do
-    context "Helpers" do
-        let(:dummy_class) { Class.new { extend HelpFunctions_dialoge } }
+  let(:dummy_class) { Class.new { extend HelpFunctions_dialoge } }
+  context "convert_string_to_number" do      
 
-        it "converts strings to numbers" do
-            10.times do |i|
-                puts i
-                expect(dummy_class.convert_string_to_number( i.to_s )).to eq i
-            end            
-        end
-
-        it "gets input" do 
-            dummy_class.stub(gets: 'test')
-            expect(dummy_class.get_input('Test')).to eq 'test'
-        end
-
-        it "gets yes" do
-            dummy_class.stub(gets: '1')
-            expect(dummy_class.get_yes('1')).to eq true
-            dummy_class.stub(gets: 'y')
-            expect(dummy_class.get_yes('y')).to eq true
-            dummy_class.stub(gets: 'yes')
-            expect(dummy_class.get_yes('yes')).to eq true
-            dummy_class.stub(gets: 'okay')
-            expect(dummy_class.get_yes('okay')).to eq true
-            dummy_class.stub(gets: 'nasdf')
-            expect(dummy_class.get_yes('nasdf')).to eq false
-        end
-
-        it "get the right array output" do
-            array = ["1", "2", "3"]
-            expect(dummy_class.get_output_array("1", array)).to eq "1"
-        end
+    it "converts lettery numbers to numbers" do
+      arr = ["one", "two", "three", "four", "fünf", "sechs", "sieben","acht","nine","zero"]
+      arr.each do |word|
+        expect(dummy_class.convert_string_to_number( word )).to be_truthy
+      end
     end
+    
+    it "converts strings of numbers to numbers" do
+      10.times do |i|
+          expect(dummy_class.convert_string_to_number( i.to_s )).to eq i
+      end
+      expect(dummy_class.convert_string_to_number( "11" )).to eq false
+    end     
+      
+  end
+
+  context "get_input" do
+    it "gets a string and returns it" do 
+      allow(dummy_class).to receive(:gets).and_return("test")
+      expect(dummy_class.get_input('test')).to eq 'test'
+    end
+  end
+
+  context "get_yes" do
+    it "gets yes" do
+      ["1", "y", "yes", "okay"].each do |str|
+        allow(dummy_class).to receive(:gets).and_return(str)
+        expect(dummy_class.get_yes("Testing #{str}")).to be true
+      end
+    end
+    
+    it "gets no" do
+      allow(dummy_class).to receive(:gets).and_return('no')
+      expect(dummy_class.get_yes("Testing no")).to be false
+    end
+  end 
+
+  context "get_output_array" do
+    it "returns a string" do
+      array = ["1", "2", "3"]
+      array.each do |str|
+        expect(dummy_class.get_output_array(str, array)).to be str
+      end      
+    end
+    
+    it "returns the correct item" do
+      array = [0, 1, 2, 3]
+      array.each do |item|
+        expect(dummy_class.get_output_array(item, array)).to eq array[item]
+      end
+    end
+    
+  end
+  
+  
+  context "inputloop_array" do
+    it "returns the correct item" do
+      array = [{a: 1, b: 2, c: 3}, "Hallo", 1, 2, 3]
+      array.length.times do |i|
+        allow(dummy_class).to receive(:gets).and_return(i.to_s, "1")
+        expect(dummy_class.inputloop_array()).to
+      end
+    end
+  end
 end

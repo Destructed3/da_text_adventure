@@ -3,6 +3,7 @@ module HelpFunctions_dialoge
   # get strings functions
   def inputlist_numbers
     return [
+      ["0", "zero", "null"],
       ["1","one","eins"],
       ["2","two","zwei"],
       ["3","drei","three"],
@@ -12,7 +13,6 @@ module HelpFunctions_dialoge
       ["7", "sieben", "seven"],
       ["8", "acht", "eight"],
       ["9", "neun", "nine"],
-      ["10", "zehn", "ten"]
     ]
   end
   
@@ -35,8 +35,10 @@ module HelpFunctions_dialoge
 
   def convert_string_to_number ( input, arr = inputlist_numbers() )
     arr.length.times do |i| 
-      return i if inputlist_numbers[i].include?input 
+      return i if arr[i].include?( input )
     end
+    
+    return false
   end
   
   def get_yes( question )
@@ -46,7 +48,8 @@ module HelpFunctions_dialoge
   def get_input( question )
     puts question
     print "> "
-    answer = gets.chomp!
+    answer = gets
+    answer.chomp!
     puts ""
     return answer
   end

@@ -5,7 +5,6 @@
 require 'ressources/dice_engine'
 
 def test_int( value, min, max )
-  puts "Val: #{value}, min: #{min}, max: #{max}"
   expect(value).is_a?(Integer)
   expect(value >= min).to eq true
   expect(value <= max).to eq true
@@ -18,14 +17,12 @@ RSpec.describe Dice_engine do
       10.times do
         roll = dummy_class.get_dice_rolls()
         expect(roll).respond_to?(:keys)
-        expect(roll.keys.length).to eq 2        
-        puts "Testing :values"
+        expect(roll.keys.length).to eq 2 
         expect(roll.keys.include?(:values)).to eq true
         expect(roll[:values]).respond_to?(:length)
         expect(roll[:values].length).to eq 2
         test_int(roll[:values][0], 3, 18)
         expect(roll[:values][1]).to eq 0
-        puts "Testing :rolls"
         expect(roll.keys.include?(:rolls)).to eq true
         expect(roll[:rolls]).respond_to?(:length)
         expect(roll[:rolls].length).to eq 3
