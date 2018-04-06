@@ -59,40 +59,44 @@ RSpec.describe HelpFunctions_dialoge do
   end  
   
   context "inputloop_array" do    
-    array = [{a: 1, b: 2, c: 3}, "Hallo", 1, 2, 3, -> { dummy_class.() }]
+    array = [
+      {a: 1, b: 2, c: 3}, 
+      "Hallo", 
+      1, 
+      2, 
+      3, 
+      -> { dummy_class.() }
+    ]
     
     it "returns the correct item" do
-      i = 1
-      array.each do |item|
-        allow(dummy_class).to receive(:gets).and_return(i.to_s, "1")
-        expect(dummy_class.inputloop_array("Test #{i.to_s}", array)).to be item
-        i += 1
-      end
+      test_inputloop_collection( :inputloop_array, array )
     end
     
   end
   
   context "inputloop_hash" do
-    hash = {a: 1, b: "2", c: [1,2,3], d: {a: 1, b: 2, c: 3}, e: -> { dummy_class.() } }
+    hash = {
+      a: 1, 
+      b: "2", 
+      c: [1,2,3], 
+      d: {a: 1, b: 2, c: 3}, 
+      e: -> { dummy_class.() } 
+    }
     
     it "returns correct item" do
-      i = 1
-      hash.each do |key, item|
-        allow(dummy_class).to receive(:gets).and_return( i.to_s, "1" )
-        expect(dummy_class.inputloop_hash("Test #{key.to_s}", hash)).to be item
-        i += 1
-      end
+      test_inputloop_collection( :inputloop_hash, hash )
     end
     
   end
 end
 
-def test_inputloop_collection( collection, loop )
+def test_inputloop_collection( function, collection )
   expect(collection.respond_to?(:each)).to eq true
   i = 1
-  collection.each do |item|
-     allow(dummy_class).to receive(:gets).and_return( i.to_s, "1" )
-     expect(loop.(collection)).to be item
-     i += 1
+  collection.each do |v1, v2|
+    item = v2 || v1
+    allow(dummy_class).to receive(:gets).and_return( i.to_s, "1" )
+    expect( dummy_class.send( function, "Test", collection ) ).to be item
+    i += 1
   end
 end
