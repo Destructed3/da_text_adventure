@@ -84,10 +84,11 @@ module HelpFunctions_dialoge
         puts (i+1).to_s + ". " + array[i].to_s
       end
       
-      output = array[Integer(get_input( "Choose one!" )) - 1]
+      number = Integer(get_input( "Choose one!" )) - 1
+      output = array[number]
       
       if output
-        puts "You choose "+output.to_s
+        puts "You choose #{output.to_s}: #{number.to_s}"
         return output if loop_out.()
       else
         puts "Please choose a legal option!"

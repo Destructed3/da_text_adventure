@@ -11,8 +11,8 @@ def test_int( value, min, max )
 end
 
 RSpec.describe Dice_engine do
-  context "functions test:" do
-    let(:dummy_class) { Class.new { extend Dice_engine } }
+  let(:dummy_class) { Class.new { extend Dice_engine } }
+  context "get_dice_rolls" do
     it "get_dice_rolls()" do
       10.times do
         roll = dummy_class.get_dice_rolls()
@@ -31,6 +31,9 @@ RSpec.describe Dice_engine do
         end
       end
     end
+  end
+  
+  context "get_crit" do
     
     it "generates crit" do
       array = [
@@ -62,7 +65,7 @@ RSpec.describe Dice_engine do
         },
         {
           values: [6, 0],
-          rolls: [1, 2, 3]
+          rolls: [1 , 2, 3]
         },
         {
           values: [4, 1],
@@ -79,13 +82,19 @@ RSpec.describe Dice_engine do
       ]
       
       array.length.times do |i|
+        expect(dummy_class.get_crit(array[i], false)).to be array[i]
         expect(dummy_class.get_crit(array[i], false)).to eq array[i]
+        expect(dummy_class.get_crit(array[i], true)).to be array[i]
         expect(dummy_class.get_crit(array[i], true)).to eq answers[i]
       end
     end
     
+  end
+  
+  context "roll" do
+    
     it "returns the correct hash" do
-      100.times do
+      1000.times do
         r_false = dummy_class.roll(false)
         expect(r_false.length).to eq 2
         test_int(r_false[0], 3, 18)
